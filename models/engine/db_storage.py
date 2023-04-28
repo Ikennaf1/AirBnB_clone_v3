@@ -82,7 +82,7 @@ class DBStorage:
         """
         obj_dict = models.storage.all(cls)
         for key, val in obj_dict.items():
-            match_str = cls + "." + id
+            match_str = "{}.{}".format(cls.__name__, id)
             if key == match_str:
                 return val
         return None
