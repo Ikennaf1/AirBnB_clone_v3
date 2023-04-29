@@ -85,6 +85,7 @@ if getenv('HBNB_TYPE_STORAGE') == 'db':
                         storage.save()
         return jsonify({}), 200
 
+
 @app_views.route('/amenities/<amenity_id>', methods=['GET'])
 def get_place_amenity(amenity_id):
     """
